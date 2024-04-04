@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Official</title>
+    <link rel="stylesheet" href="css/stile.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://wsxzaq127.github.io/style.css">
+</head>
+<body class="body">
+    <header class="header">
+        <div class="container container__header" >
+            <img src="img/Logo.png" alt="logotip" class="loga">
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">Главная</li>
+                    <li class="nav__item">Суть игры</li>
+                    <li class="nav__item">Описание</li>
+                    <li class="nav__item">Галерея</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section class="section">
+            <div class="div">
+                <img src="img/Menu.png" alt="menu" class="menu">
+                <h2 class="h2">Главная</h2>
+                <p class="p">Игра находиться в разработке , скоро будет выпущена на платформе "Яндекс Игры".Увлекательная сюжетная 2d игра , разрабатываеться на движке Godot 3.</p>
+                
+                
+            </div>
+        </section>
+
+
+
+        <section class="about"> 
+            <div class="container__container__about">
+                <h2 class="about__title">Суть игры.</h2>
+                <div class="about__content">
+                    <p class="about__text">Твоя цель проста , ты должен выжить! Пройдя все уровни и уничтожив всех своих соперников ты должен сразиться с боссом.</p>
+                    <img  src="img/Level1.png" alt="level" class="about__img">
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+        <section class="history">
+            <div class="history__div">
+                <div class="history__container">
+                   <h2 class="history__h2">История создания</h2>
+                   <p class="history__text">Проект находится в разработке на движке Godot Engine , но вскоре был перенесён на движок Unite  из за технических проблем. </p> 
+                </div>
+                
+                <div class="history__conteiner2">
+                   <ul class="histiry__ul">
+                      <li class="history__li">
+                          <img src="img/lose.png" alt="History" class="history__img"/>
+                      </li>
+                      <li class="history__li">
+                          <img src="img/level.png" alt="History" class="history__img"/>
+                      </li>
+                   </ul>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="video">
+            <div class="container container__video">
+              <h2  class="video__title">Видео</h2>
+              <iframe class="video_video" width="560" height="315" src="https://www.youtube.com/embed/0zMLl9WbHVg?si=bFUc79Wh5Y4AISCh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="container conteiner__gallery">
+               
+               <h2 class="gallery__title">Галерея</h2>
+               <ul class="gallery__list">
+                 <li class="gallery__item">
+                    <a href="img/Menu.png" class="lightzoom">
+                        <img src="img/Menu.png" alt="lose" class="gallery__img">
+                    </a>
+                 </li>
+                 <li class="gallery__item">
+                    <a href="img/lose.png" class="lightzoom">
+                        <img src="img/lose.png" alt="lose" class="gallery__img">
+                    </a>
+                 </li>
+                 <li class="gallery__item">
+                    <a href="img/level.png" class="lightzoom">
+                        <img src="img/level.png" alt="lose" class="gallery__img">
+                    </a>
+                 </li>
+                 <li class="gallery__item">
+                    <a href="img/Фон менюшки.png" class="lightzoom">
+                        <img src="img/Фон менюшки.png" alt="lose" class="gallery__img">
+                    </a>
+                 </li>
+                 <li class="gallery__item">
+                    <a href="img/1фон.png" class="lightzoom">
+                        <img src="img/1фон.png" alt="lose" class="gallery__img">
+                    </a>
+                 </li>
+                 <li class="gallery__item">
+                    <a href="img/Level1.png" class="lightzoom">
+                        <img src="img/Level1.png" alt="lose" class="gallery__img">
+                    </a>
+                 </li>
+               </ul>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__conteiner">
+            <h2 class="footer__title">Mega</h2>
+            <p class="footer__text">© made by Krylov Yaroslav</p>
+        </div>
+        <ul class="footer__list">
+            <li class="footer__item">
+                <img src="img/telegram.png" alt="telegramm" class="footer__img">
+            </li>
+            <li class="footer__item">
+                <img src="img/vk.png" alt="vk" class="footer__img">
+            </li>
+            <li class="footer__item">
+                <img src="img/discord.png" alt="discord" class="footer__img">
+            </li>
+        </ul>
+    </footer>
+
+
+    <script>
+        var socket = new WebSocket("ws://127.0.0.1:9090/");
+        socket.onmessage = messageReceived;
+
+        function messageReceived(e) {
+            console.log(e.data);
+        }
+    </script>
+
+<script type="text/javascript" src="https://wsxzaq127.github.io/lightzoom.js"></script>
+<script type="text/javascript">
+   jQuery('.lightzoom').lightzoom({speed: 400, viewTitle: true});
+  </script>
+
+
+</body>
+</html>
